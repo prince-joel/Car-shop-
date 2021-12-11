@@ -1,25 +1,31 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade';
+
 
 function Section({ title, description,LeftButtonText, RightButtonText, backgroundimg}) {
     return (
         <Wrap bgimage={backgroundimg}>
-            <ItemText>
-                <h1>Model S</h1>
-                <p> Order Online for Touchless Delivery </p>
-            </ItemText>
+            <Fade bottom>
+                <ItemText>
+                    <h1>Model S</h1>
+                    <p> Order Online for Touchless Delivery </p>
+                </ItemText>
+            </Fade>
             <Buttons>
-                <ButtonGroup>
-                    <LeftButton>
-                        {LeftButtonText}
-                    </LeftButton>
-                    {RightButtonText &&
-                        <RightButton>
-                        {RightButtonText} 
-                    </RightButton> 
-                    }
-                    
-                </ButtonGroup>
+                <Fade bottom>
+                    <ButtonGroup>
+                        <LeftButton>
+                            {LeftButtonText}
+                        </LeftButton>
+                        {RightButtonText &&
+                            <RightButton>
+                            {RightButtonText} 
+                        </RightButton> 
+                        }
+                        
+                    </ButtonGroup>
+                </Fade>
                 <DownArrow src="/images/down-arrow.svg"/>
             </Buttons>
 
@@ -87,7 +93,7 @@ const DownArrow = styled.img`
     height: 40px;
     position: fixed;
     Z-index: 1000;
-    left: 45%;
+    left: 49%;
     bottom: 10px;
     animation: animationDown infinite 1.5s;
 
