@@ -4,9 +4,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import {selectCars} from "../components/features/car/carSlice"
 import {useSelector} from 'react-redux'
-
+ 
 function Header() {
-    const [burgerStatus, setBurgerStatus] = [useState(false )]
+    const [burgerStatus, setBurgerStatus] = useState(false );
     const cars = useSelector(selectCars)
     return (
         <Container>
@@ -25,7 +25,7 @@ function Header() {
             </RightMenu>
             <BurgerNav show={burgerStatus }>
                 <CloseWrapper>
-                    <CustomClose onClick={()=> setBurgerStatus(false)}/>
+                    <CustomClose onClick={()=>setBurgerStatus(false)}/>
                 </CloseWrapper>
                 {cars && cars.map((car, index)=>(
                     <li key={index}><a href="#">{car}</a></li>

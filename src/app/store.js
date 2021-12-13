@@ -6,3 +6,5 @@ export const store = configureStore({
         car: carReducer,
     },
 });
+
+export default store

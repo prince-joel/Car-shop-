@@ -8,8 +8,8 @@ function Section({ title, description,LeftButtonText, RightButtonText, backgroun
         <Wrap bgimage={backgroundimg}>
             <Fade bottom>
                 <ItemText>
-                    <h1>Model S</h1>
-                    <p> Order Online for Touchless Delivery </p>
+                    <h1>{title}</h1>
+                    <p> {description} </p>
                 </ItemText>
             </Fade>
             <Buttons>
